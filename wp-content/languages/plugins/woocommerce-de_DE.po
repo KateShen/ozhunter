@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-10-23 20:00:10+0000\n"
+"PO-Revision-Date: 2016-11-12 22:29:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,19 @@ msgstr ""
 "X-Generator: GlotPress/2.3.0-alpha\n"
 "Language: de\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+
+#: includes/admin/class-wc-admin-menus.php:105
+msgid "Extensions"
+msgstr "Erweiterungen"
+
+#: includes/admin/class-wc-admin-menus.php:105
+#: includes/admin/views/html-admin-page-addons.php:16
+msgid "WooCommerce Extensions"
+msgstr "WooCommerce Erweiterungen"
+
+#: includes/admin/class-wc-admin-addons.php:350
+msgid "Installed"
+msgstr "Installiert"
 
 #. Author URI of the plugin/theme
 msgid "https://woocommerce.com"
@@ -45,7 +58,7 @@ msgstr "Ob die Variation sichtbar ist."
 
 #: includes/admin/settings/views/html-admin-page-shipping-zone-methods.php:41
 msgid "Click \"Add shipping method\" to get started."
-msgstr "Klicke auf \"Versandart hinzufügen\" um die Einrichtung zu beginnen."
+msgstr "Klicke auf \"Versandart hinzufügen\", um mit der Konfiguration zu beginnen."
 
 #: includes/class-wc-shipping-zone.php:230
 msgid "Everywhere"
@@ -171,7 +184,7 @@ msgstr[1] "%1$d&ndash;%2$d von %3$d Ergebnissen werden angezeigt."
 #: templates/emails/customer-on-hold-order.php:28
 #: templates/emails/plain/customer-on-hold-order.php:25
 msgid "Your order is on-hold until we confirm payment has been received. Your order details are shown below for your reference:"
-msgstr "Deine Bestellung ist nun so lange in der Wartestellung bis wir den Zahlungseingang bestätigen. Unten findest du die Details zu deiner Bestellung:"
+msgstr "Deine Bestellung wird solange zurückgestellt bis wir deinen Zahlungseingang bestätigen. Nachfolgend findest du die Details zu deiner Bestellung:"
 
 #: includes/widgets/class-wc-widget-rating-filter.php:26
 msgid "WooCommerce Average Rating Filter"
@@ -1116,7 +1129,7 @@ msgstr "Der Antwort body des empfangenden Servers."
 
 #: includes/api/class-wc-rest-webhook-deliveries.php:274
 msgid "Array of the response headers from the receiving server."
-msgstr "Array der Antwort-Header des empfangenden Servers."
+msgstr "Array des Antwort-Headers des empfangenden Servers."
 
 #: includes/api/class-wc-rest-webhook-deliveries.php:268
 msgid "The HTTP response message from the receiving server."
@@ -3247,8 +3260,8 @@ msgid "Community Forum"
 msgstr "Community-Forum"
 
 #: includes/admin/class-wc-admin-help.php:190
-msgid "For further assistance with WooCommerce core you can use the %scommunity forum%s. If you need help with premium add-ons sold by WooThemes, please %suse our helpdesk%s."
-msgstr "Für weitere Unterstützung mit WooCommerce kannst du das %sCommunity-Forum%s nutzen. Wenn du Hilfe mit Premium-Erweiterungen von WooThemes benötigst, nutze bitte unseren %sHelp Desk%s."
+msgid "For further assistance with WooCommerce core you can use the %1$scommunity forum%2$s. If you need help with premium extensions sold by WooCommerce, please %3$suse our helpdesk%4$s."
+msgstr "Für weitere Unterstützung mit WooCommerce kannst du das %1$sCommunity-Forum%2$s nutzen. Wenn du Hilfe mit Premium-Erweiterungen von WooThemes benötigst, nutze bitte unseren %3$sHelp Desk%4$s."
 
 #: includes/admin/class-wc-admin-help.php:181
 #: includes/admin/class-wc-admin-help.php:183
@@ -3294,7 +3307,7 @@ msgstr "Beschränke die Ergebnismenge auf Ressourcen mit einem bestimmten Slug."
 
 #: includes/abstracts/abstract-wc-rest-terms-controller.php:745
 msgid "Limit result set to resources assigned to a specific product."
-msgstr "Beschränkt Ergebnismenge auf Ressourcen, die einem bestimmten Produkt zugeordnet werden. "
+msgstr "Beschränkt Ergebnismenge auf Ressourcen, die einem bestimmten Produkt zugeordnet werden."
 
 #: includes/abstracts/abstract-wc-rest-terms-controller.php:738
 msgid "Limit result set to resources assigned to a specific parent."
@@ -3375,7 +3388,7 @@ msgstr "Nutze WP Query Argumente um die Antwort zu verändern; geschützte query
 
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:674
 msgid "Limit result set to all items except those of a particular parent id."
-msgstr "Beschränkt Ergebnismenge auf alle Elemente, außer denen, die einer bestimmten Eltern-Identität zugeordnet werden. "
+msgstr "Beschränkt Ergebnismenge auf alle Elemente, außer denen, die einer bestimmten Eltern-Identität zugeordnet werden."
 
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:668
 msgid "Limit result set to those of particular parent ids."
@@ -3455,7 +3468,7 @@ msgstr "Ungültige post ID."
 #: includes/api/class-wc-rest-orders-controller.php:1084
 #: includes/api/class-wc-rest-webhooks-controller.php:217
 msgid "ID is invalid."
-msgstr "ID ist ungültig."
+msgstr "Die ID ist ungültig."
 
 #: includes/abstracts/abstract-wc-rest-posts-controller.php:176
 #: includes/api/class-wc-rest-order-notes-controller.php:197
@@ -3523,15 +3536,15 @@ msgstr "Entschuldige, du darfst keine Ressourcen anlegen."
 #: includes/api/class-wc-rest-taxes-controller.php:107
 #: includes/api/class-wc-rest-webhook-deliveries.php:74
 msgid "Sorry, you cannot list resources."
-msgstr "Sorry, es können keine Ressourcen aufgelistet werden. "
+msgstr "Sorry, es können keine Ressourcen aufgelistet werden."
 
 #: includes/abstracts/abstract-wc-rest-controller.php:210
 msgid "List of delete resources."
-msgstr "Liste der gelöschten Ressourcen. "
+msgstr "Liste der gelöschten Ressourcen."
 
 #: includes/abstracts/abstract-wc-rest-controller.php:205
 msgid "List of updated resources."
-msgstr "Liste der aktualisierten Ressourcen. "
+msgstr "Liste der aktualisierten Ressourcen."
 
 #: includes/abstracts/abstract-wc-rest-controller.php:200
 msgid "List of created resources."
@@ -4151,11 +4164,11 @@ msgstr "Wenn Du den Einrichtungsassistenten erneut ausführen möchtest, klicke 
 msgid "Setup Wizard"
 msgstr "Einrichtungsassistent"
 
-#: includes/admin/class-wc-admin-addons.php:109
+#: includes/admin/class-wc-admin-addons.php:132
 msgid "View more Storefront child themes"
 msgstr "Zeige mehr Storefront Child Themes "
 
-#: includes/admin/class-wc-admin-addons.php:105
+#: includes/admin/class-wc-admin-addons.php:128
 msgid "Need a fresh look? Try Storefront child themes"
 msgstr "Brauchst du einen neuen Look? Probiere doch mal die Storefront Child Themes aus."
 
@@ -4209,7 +4222,7 @@ msgstr "Bheri"
 
 #: i18n/states/NP.php:15
 msgid "Dhawalagiri"
-msgstr "Dhaulagiri"
+msgstr "Dhawalagiri"
 
 #: i18n/states/MY.php:20
 msgid "Penang (Pulau Pinang)"
@@ -5591,7 +5604,7 @@ msgstr "Bitte gib eine gültige Bestellnummer ein."
 
 #: includes/abstracts/abstract-wc-payment-gateway.php:432
 msgid "Use a new payment method"
-msgstr "Eine neue Zahlungsart benutzen"
+msgstr "Verwende eine andere Zahlungsart"
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:272
 msgid "Password reset is not allowed for this user"
@@ -7847,7 +7860,7 @@ msgid "Please enter a valid postcode/ZIP."
 msgstr "Bitte gib eine gültige Postleitzahl ein."
 
 #: includes/class-wc-form-handler.php:101
-#: includes/class-wc-form-handler.php:201
+#: includes/class-wc-form-handler.php:200
 msgid "is a required field."
 msgstr "ist ein Pflichtfeld."
 
@@ -7939,7 +7952,7 @@ msgstr "Ein Produkt, das nicht länger verfügbar ist, wurde aus deinem Warenkor
 msgid "%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance."
 msgstr "%s wurde aus deinem Warenkorb entfernt, da es nicht mehr gekauft werden kann. Bitte kontaktiere uns, wenn du Hilfe benötigst."
 
-#: includes/class-wc-cache-helper.php:219
+#: includes/class-wc-cache-helper.php:218
 msgid "In order for <strong>database caching</strong> to work with WooCommerce you must add <code>_wc_session_</code> to the \"Ignored Query Strings\" option in W3 Total Cache settings <a href=\"%s\">here</a>."
 msgstr "Um WooCommere mit <strong>Datenbank-Caching</strong> kompatibel zu machen, musst du <code>_wc_session_</code> zu den „Ignored Query Strings“-Optionen in den  <a href=\"%s\">W3 Total Cache Einstellungen</a> ändern."
 
@@ -9630,37 +9643,37 @@ msgstr "Momentan gibt es keine Protollierung (Log), die angezeigt werden könnte
 msgid "Log file: %s (%s)"
 msgstr "Log-Datei: %s (%s)"
 
-#: includes/admin/views/html-admin-page-addons.php:56
+#: includes/admin/views/html-admin-page-addons.php:61
 msgid "Download &amp; install"
 msgstr "Herunterladen und installieren"
 
-#: includes/admin/views/html-admin-page-addons.php:55
+#: includes/admin/views/html-admin-page-addons.php:60
 msgid "Read all about it"
 msgstr "Alle Informationen dazu"
 
-#: includes/admin/views/html-admin-page-addons.php:53
+#: includes/admin/views/html-admin-page-addons.php:58
 msgid "Storefront is an intuitive, flexible and %sfree%s WordPress theme offering deep integration with WooCommerce and many of the most popular customer-facing extensions."
 msgstr "Storefront ist ein intuitiv bedienbares, flexibles und %skostenloses%s WordPress-Theme. Es bietet eine sehr gute Integration von WooCommerce und unterstützt die beliebtesten Erweiterungen."
 
-#: includes/admin/views/html-admin-page-addons.php:52
+#: includes/admin/views/html-admin-page-addons.php:57
 msgid "We recommend Storefront, the %sofficial%s WooCommerce theme."
 msgstr "Wir empfehlen Storefront, das %soffizielle%s WooCommerce-Theme."
 
-#: includes/admin/views/html-admin-page-addons.php:51
+#: includes/admin/views/html-admin-page-addons.php:56
 msgid "Looking for a WooCommerce theme?"
 msgstr "Suchst du nach einem WooCommerce-Theme?"
 
-#: includes/admin/views/html-admin-page-addons.php:45
+#: includes/admin/views/html-admin-page-addons.php:50
 msgid "Our catalog of WooCommerce Extensions can be found on WooCommerce.com here: <a href=\"%s\">WooCommerce Extensions Catalog</a>"
 msgstr "Unseren Katalog mit Erweiterungen für WooCommerce findest du auf WooCommerce.com unter: <a href=\"%s\">WooCommerce Extensions Catalog (engl.)</a>"
 
-#: includes/admin/class-wc-admin-addons.php:114
+#: includes/admin/class-wc-admin-addons.php:348
+msgid "Free"
+msgstr "Kostenlos"
+
+#: includes/admin/class-wc-admin-addons.php:137
 msgid "Need a theme? Try Storefront"
 msgstr "Du benötigst ein Template? Probiere Storefront aus."
-
-#: includes/admin/views/html-admin-page-addons.php:17
-msgid "Browse all extensions"
-msgstr "Stöbere in allen Erweiterungen"
 
 #: includes/admin/settings/views/settings-tax.php:108
 msgid "Itemized"
@@ -11602,7 +11615,7 @@ msgstr[1] "%s Mal heruntergeladen"
 
 #: includes/admin/meta-boxes/views/html-order-download-permission.php:10
 msgid "Revoke Access"
-msgstr "Zugang widerrufen"
+msgstr "Zugriff entziehen"
 
 #: includes/admin/meta-boxes/class-wc-meta-box-product-images.php:78
 msgid "Add product gallery images"
@@ -14429,15 +14442,6 @@ msgctxt "Admin menu name"
 msgid "Orders"
 msgstr "Bestellungen"
 
-#: includes/admin/class-wc-admin-menus.php:105
-msgid "Add-ons"
-msgstr "Add-ons"
-
-#: includes/admin/class-wc-admin-menus.php:105
-#: includes/admin/views/html-admin-page-addons.php:16
-msgid "WooCommerce Add-ons/Extensions"
-msgstr "WooCommerce Add-ons/Erweiterungen"
-
 #: includes/admin/class-wc-admin-menus.php:80
 msgid "WooCommerce Settings"
 msgstr "WooCommerce Einstellungen"
@@ -14636,21 +14640,21 @@ msgstr "Duplizieren"
 msgid "Make a duplicate from this product"
 msgstr "Duplikat (Kopie) von diesem Produkt erstellen"
 
-#: includes/admin/class-wc-admin-dashboard.php:200
+#: includes/admin/class-wc-admin-dashboard.php:244
 msgid "There are no product reviews yet."
 msgstr "Noch keine Produktbewertungen vorhanden."
 
-#: includes/admin/class-wc-admin-dashboard.php:194
+#: includes/admin/class-wc-admin-dashboard.php:238
 msgid "reviewed by"
 msgstr "bewertet von"
 
-#: includes/admin/class-wc-admin-dashboard.php:157
+#: includes/admin/class-wc-admin-dashboard.php:203
 msgid "<strong>%s product</strong> out of stock"
 msgid_plural "<strong>%s products</strong> out of stock"
 msgstr[0] "<strong>%s Produkt</strong> nicht vorrätig"
 msgstr[1] "<strong>%s Produkte</strong> nicht vorrätig"
 
-#: includes/admin/class-wc-admin-dashboard.php:152
+#: includes/admin/class-wc-admin-dashboard.php:198
 msgid "<strong>%s product</strong> low in stock"
 msgid_plural "<strong>%s products</strong> low in stock"
 msgstr[0] "<strong>%s Produkt </strong> in geringer Stückzahl"
@@ -14668,11 +14672,11 @@ msgid_plural "<strong>%s orders</strong> awaiting processing"
 msgstr[0] "<strong>%s Bestellung</strong> wartet auf Bearbeitung "
 msgstr[1] "<strong>%s Bestellungen</strong> warten auf Bearbeitung "
 
-#: includes/admin/class-wc-admin-dashboard.php:136
+#: includes/admin/class-wc-admin-dashboard.php:111
 msgid "%s top seller this month (sold %d)"
 msgstr "%s meistverkauftes Produkt in diesem Monat (%d verkauft)"
 
-#: includes/admin/class-wc-admin-dashboard.php:129
+#: includes/admin/class-wc-admin-dashboard.php:100
 msgid "<strong>%s</strong> net sales this month"
 msgstr "<strong>%s</strong> Netto-Verkäufe in diesem Monat"
 
@@ -14875,7 +14879,7 @@ msgstr "Du kannst nicht den gleichen Steuersatz zweimal hinzufügen!"
 
 #: includes/admin/class-wc-admin-assets.php:284
 msgid "Are you sure you want to revoke access to this download?"
-msgstr "Bist du sicher, dass du den Zugang zu diesem Download widerrufen willst?"
+msgstr "Bist du sicher, dass du den Zugriff auf diesen Download enziehen willst?"
 
 #: includes/admin/class-wc-admin-assets.php:283
 msgid "Could not grant access - the user may already have permission for this file or billing email is not set. Ensure the billing email is set, and the order has been saved."
@@ -15192,7 +15196,7 @@ msgstr "Aktion fehlgeschlagen. Bitte lade die Seite neu und versuche es noch ein
 
 #: includes/admin/class-wc-admin-api-keys.php:132
 msgid "API Key revoked successfully."
-msgstr "API-Schlüssel erfolgreich widerrufen."
+msgstr "API-Schlüssel erfolgreich zurückgezogen."
 
 #: includes/admin/class-wc-admin-api-keys.php:71
 msgid "Search Key"
@@ -15239,7 +15243,7 @@ msgstr "Lesen"
 #: includes/admin/class-wc-admin-api-keys-table-list.php:81
 #: includes/admin/class-wc-admin-api-keys-table-list.php:169
 msgid "Revoke"
-msgstr "Widerrufen"
+msgstr "Zurückziehen"
 
 #: includes/admin/class-wc-admin-api-keys-table-list.php:81
 msgid "Revoke API Key"
@@ -15302,7 +15306,7 @@ msgid "key"
 msgstr "Schlüssel"
 
 #: includes/abstracts/abstract-wc-product.php:1201
-#: includes/admin/class-wc-admin-dashboard.php:192
+#: includes/admin/class-wc-admin-dashboard.php:236
 #: templates/single-product/review-rating.php:29
 msgid "out of 5"
 msgstr "von 5"
@@ -15392,13 +15396,13 @@ msgstr "Der Lagerbestand des Produkts %s wurde von %s auf %s erhöht."
 
 #: includes/abstracts/abstract-wc-order.php:2641
 msgid "Item %1$s variation #%2$s stock reduced from %3$s to %4$s."
-msgstr "Lagerbestand des Produktes %1$s Variante #%2$s  wurde von %3$s auf %4$s reduziert."
+msgstr "Lagerbestand von %1$s Variante #%2$s reduziert von %3$s auf %4$s."
 
 #: includes/abstracts/abstract-wc-order.php:2394
 msgid "Order status changed from %1$s to %2$s."
 msgstr "Status der Bestellung von %1$s auf %2$s geändert."
 
-#. #-#-#-#-#  tmp-woocommerce.pot (WooCommerce 2.6.6)  #-#-#-#-#
+#. #-#-#-#-#  tmp-woocommerce.pot (WooCommerce 2.6.8)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/abstracts/abstract-wc-order.php:2320
 #: includes/abstracts/abstract-wc-order.php:2321

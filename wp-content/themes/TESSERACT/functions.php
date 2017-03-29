@@ -2176,3 +2176,9 @@ function disable_wp_emojicons() {
 }
 
 add_action( 'init', 'disable_wp_emojicons' );
+
+add_filter( 'bbp_verify_nonce_request_url', 'my_bbp_verify_nonce_request_url', 999, 1 );
+function my_bbp_verify_nonce_request_url( $requested_url )
+{
+    return 'http://localhost:8888' . $_SERVER['REQUEST_URI'];
+}

@@ -73,13 +73,6 @@ class BBP_Default extends BBP_Theme_Compat {
 		add_action( 'bbp_enqueue_scripts',         array( $this, 'enqueue_styles'          ) ); // Enqueue theme CSS
 		add_action( 'bbp_enqueue_scripts',         array( $this, 'enqueue_scripts'         ) ); // Enqueue theme JS
 		add_filter( 'bbp_enqueue_scripts',         array( $this, 'localize_topic_script'   ) ); // Enqueue theme script localization
-
-		add_filter( 'bbp_verify_nonce_request_url', 'my_bbp_verify_nonce_request_url', 999, 1 );
-function my_bbp_verify_nonce_request_url( $requested_url )
-{
-    return 'http://localhost:8888' . $_SERVER['REQUEST_URI'];
-}
-
 		add_action( 'bbp_ajax_favorite',           array( $this, 'ajax_favorite'           ) ); // Handles the topic ajax favorite/unfavorite
 		add_action( 'bbp_ajax_subscription',       array( $this, 'ajax_subscription'       ) ); // Handles the topic ajax subscribe/unsubscribe
 		add_action( 'bbp_ajax_forum_subscription', array( $this, 'ajax_forum_subscription' ) ); // Handles the forum ajax subscribe/unsubscribe
@@ -404,7 +397,6 @@ function my_bbp_verify_nonce_request_url( $requested_url )
 		// Action succeeded
 		bbp_ajax_response( true, bbp_get_user_favorites_link( $attrs, $user_id, false ), 200 );
 	}
-
 
 	/**
 	 * AJAX handler to Subscribe/Unsubscribe a user from a topic

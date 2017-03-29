@@ -4,7 +4,7 @@
 Plugin Name: Spacer
 Plugin URI: http://www.clevelandwebdeveloper.com/wordpress-plugins/spacer
 Description: Adds a spacer button to the WYSIWYG visual editor which allows you to add precise custom spacing between lines in your posts and pages.
-Version: 3.0.3
+Version: 3.0.4
 Author: Justin Saad
 Author URI: http://www.clevelandwebdeveloper.com
 License: GPL2
@@ -111,19 +111,19 @@ class motech_spacer {
 		$user_id = get_current_user_id();
 		//there is no default spacer height set, and nag message not ignored...
 		//$checkdefault = get_option($this->plugin_slug . '_default_height_mobile','');
-		if ( ( ! get_user_meta($user_id, 'spacer4592_nag_ignore') ) && (current_user_can( 'manage_options' )) ) {
+		if ( ( ! get_user_meta($user_id, 'spacer2295_nag_ignore') ) && (current_user_can( 'manage_options' )) ) {
 			echo '<div id="message" class="updated fade notice"><p>';
-			echo "<b>".__('Style your own panels (think alerts, info boxes) and use them in your posts and pages whenever they are needed, with the new Spacer add-on, Panels!', 'motech-spacer')."</b>";
+			echo "<b>".__("Take more time as you craft article updates. Designate 'draft' content with one-click! Try the new Spacer add-on, Draft It!", "motech-spacer")."</b>";
 			echo "</p>";
-			echo "<p><strong><a href=\"http://www.clevelandwebdeveloper.com/?p=931&amp;utm_medium=plugin&amp;utm_source=plugin-notice-msg&amp;utm_campaign=Spacer+Notice+Msg&amp;utm_content=Panels+Notice\" target=\"_blank\">".__('Create Panels &raquo;', 'motech-spacer')."</a> | <a class=\"dismiss-notice\" style=\"color:red;\" href=\"".get_bloginfo( 'wpurl' ) . "/wp-admin/options-general.php?page=".$this->plugin_slug."-setting-admin&spacer4592_nag_ignore=0\" target=\"_parent\">".__('I got it. Thanks.', 'motech-spacer')." [X]</a></strong></p></div>";
+			echo "<p><strong><a href=\"http://www.clevelandwebdeveloper.com/?p=1269&amp;utm_medium=plugin&amp;utm_source=plugin-notice-msg&amp;utm_campaign=Spacer+Notice+Msg&amp;utm_content=Draftit+Notice\" target=\"_blank\">".__('Start Drafting &raquo;', 'motech-spacer')."</a> | <a class=\"dismiss-notice\" style=\"color:red;\" href=\"".get_bloginfo( 'wpurl' ) . "/wp-admin/options-general.php?page=".$this->plugin_slug."-setting-admin&spacer2295_nag_ignore=0\" target=\"_parent\">".__('I got it. Thanks.', 'motech-spacer')." [X]</a></strong></p></div>";
 		}
 	}
 	 
 	function adminmessage_init()
 	{
-		if ( isset($_GET['spacer4592_nag_ignore']) && '0' == $_GET['spacer4592_nag_ignore'] ) {
+		if ( isset($_GET['spacer2295_nag_ignore']) && '0' == $_GET['spacer2295_nag_ignore'] ) {
 			$user_id = get_current_user_id();
-			add_user_meta($user_id, 'spacer4592_nag_ignore', 'true', true);
+			add_user_meta($user_id, 'spacer2295_nag_ignore', 'true', true);
 			if (wp_get_referer()) {
 				/* Redirects user to where they were before */
 				wp_safe_redirect(wp_get_referer());
@@ -493,7 +493,7 @@ function activespacer($id="") { #return attributes for active spacer based on id
                 </div>
                 
 
-                <div class="grwrap panels">
+                <div class="grwrap panels" style="display:none;">
                 
                     <div id="green_ribbon_top">
                         <div id="green_ribbon_left">
@@ -552,6 +552,21 @@ function activespacer($id="") { #return attributes for active spacer based on id
             
                             
             </div>
+            
+            <div class="grwrap draftit">
+            
+                <div id="green_ribbon_top">
+                    <div id="green_ribbon_left">
+                    </div>
+                    <div id="green_ribbon_base">
+                        <span id="hms_get_premium" addonname="gotourl" useurl="http://www.clevelandwebdeveloper.com/?p=1269&amp;utm_medium=plugin&amp;utm_source=plugin-notice-msg&amp;utm_campaign=Spacer+Notice+Msg&amp;utm_content=Draftit+Notice"><?php _e('NEW! Get Draft It! &raquo;', 'motech-spacer')?></span>
+                        <span class="hms_get_premium_meta"><?php _e('Draft It! Add-On now available for as low as $19!', 'motech-spacer')?></span>
+                    </div>
+                    <div id="green_ribbon_right">
+                    </div>
+                </div>
+                        
+        	</div>
                         
             
 	<h2 class="nav-tab-wrapper">
@@ -681,7 +696,17 @@ if( is_plugin_active( 'spacer-panels/index.php' ) ) {
 	$actionbutton = '<a href="javascript:void(0)" title="'.__('Installed', 'motech-spacer').'" class="button-secondary msbutton">'.__('Installed', 'motech-spacer').'</a>';
 }
 ?>
-<div class="msaddon mscol"><img src="<?php echo plugins_url( 'images/part.png' , __FILE__ ) ?>"><h2><?php _e('Panels', 'motech-spacer') ?></h2><div class="msaddon-content"><p><?php _e('Style your own panels (think alerts, info boxes) and use them in your posts and pages whenever they are needed.', 'motech-spacer') ?></p><div class="msaddon-buttons"><a href="http://www.clevelandwebdeveloper.com/?p=931&amp;utm_medium=plugin&amp;utm_source=plugin-addons-page&amp;utm_campaign=Spacers+Addons+Page&amp;utm_content=Panels+Learn" target="_blank" class="button-secondary msdbutton"><?php _e('Learn More', 'motech-spacer') ?></a><?php echo $actionbutton ?></div></div></div>   
+<div class="msaddon mscol"><img src="<?php echo plugins_url( 'images/part.png' , __FILE__ ) ?>"><h2><?php _e('Panels', 'motech-spacer') ?></h2><div class="msaddon-content"><p><?php _e('Style your own panels (think alerts, info boxes) and use them in your posts and pages whenever they are needed.', 'motech-spacer') ?></p><div class="msaddon-buttons"><a href="http://www.clevelandwebdeveloper.com/?p=931&amp;utm_medium=plugin&amp;utm_source=plugin-addons-page&amp;utm_campaign=Spacers+Addons+Page&amp;utm_content=Panels+Learn" target="_blank" class="button-secondary msdbutton"><?php _e('Learn More', 'motech-spacer') ?></a><?php echo $actionbutton ?></div></div></div>
+
+<?php
+$actionbutton = '<a href="http://www.clevelandwebdeveloper.com/?p=1269&amp;utm_medium=plugin&amp;utm_source=plugin-addons-page&amp;utm_campaign=Spacers+Addons+Page&amp;utm_content=Draftit+Learn" target="_blank" title="'.__('Buy Draft It!', 'motech-spacer').'" class="button-primary msbutton">'.__('Buy Now', 'motech-spacer').'</a>';
+if( is_plugin_active( 'spacer-draftit/index.php' ) ) {
+	$actionbutton = '<a href="javascript:void(0)" title="'.__('Active', 'motech-spacer').'" class="button-secondary msbutton">'.__('Active', 'motech-spacer').'</a>';
+} elseif( file_exists(plugin_dir_path(__FILE__) . '../spacer-draftit/index.php') ) {
+	$actionbutton = '<a href="javascript:void(0)" title="'.__('Installed', 'motech-spacer').'" class="button-secondary msbutton">'.__('Installed', 'motech-spacer').'</a>';
+}
+?>
+<div class="msaddon mscol"><img src="<?php echo plugins_url( 'images/diart.png' , __FILE__ ) ?>"><h2><?php _e('Draft It!', 'motech-spacer') ?></h2><div class="msaddon-content"><p><?php _e("Take more time as you craft article updates. Designate 'draft' content with one-click!", "motech-spacer") ?></p><div class="msaddon-buttons"><a href="http://www.clevelandwebdeveloper.com/?p=1269&amp;utm_medium=plugin&amp;utm_source=plugin-addons-page&amp;utm_campaign=Spacers+Addons+Page&amp;utm_content=Draftit+Learn" target="_blank" class="button-secondary msdbutton"><?php _e('Learn More', 'motech-spacer') ?></a><?php echo $actionbutton ?></div></div></div>   
         
                 </div>
                 <div id="licenses" class="metabox-holder mainsection hidden wrap">
@@ -1856,8 +1881,13 @@ wp_get_current_user();
 							// For some browsers, `attr` is undefined; for others, `attr` is false. Check for both.
 							if (typeof addonname !== typeof undefined && addonname !== false) {
 							  // Element has this attribute
-							  jQuery(".grwrap").hide();
-							  jQuery(".grwrap."+addonname).show();
+							  if(addonname=="gotourl"){
+								  var useurl = jQuery(this).attr('useurl');
+								  window.open(useurl);
+							  }else{
+								  jQuery(".grwrap").hide();
+								  jQuery(".grwrap."+addonname).show();
+							  }
 							}
 								
 						});
